@@ -1,16 +1,39 @@
 {% load i18n %}
 
-<div style="height:0px">
-  <div class="row widget-container">
-    <div class="form-group">
-      <div class="relative">
-          <label class="col-xs-12 control-label widget-input-label"> {% trans "External address service url" %}</label>
-      </div>
+<style>
 
-      <div class="col-xs-12">
+    .node-dropdown {
+        margin-top: 10px;
+        padding: 0px 15px;
+    }
 
-          <input class="form-control input-lg mar-top" placeholder="Address URL" data-bind="textInput: external_address_url" />
-      </div>
+</style>
+
+<div>
+    <div class="row widget-container">
+        <div class="form-group">
+            <div class="relative">
+                <label class="col-xs-12 control-label widget-input-label"> {% trans "External address service url" %}</label>
+            </div>
+
+            <div class="col-xs-12">
+                <input class="form-control input-lg mar-top" placeholder="Address URL" data-bind="textInput: external_address_url" />
+            </div>
+        </div>
     </div>
-  </div>
+    <!--ko foreach: targetFields -->
+        <div class="node-dropdown">
+            <div>
+            <label class="col-xs-12 control-label widget-input-label">
+                <div style="display: flex">
+                    <div data-bind='text: name'></div>
+                    <div style="padding: 0 5px" data-bind='text: "(" + ko.unwrap(type) + ")"'></div>
+                </div>
+            </label>
+        </div>
+            <div>
+                <select data-placeholder="{% trans 'select matching node' %}" data-bind="chosen: {width: '100%', disable_search_threshold: 15}, value: node, options: $parent.nodes(), optionsText: 'name', optionsValue: 'nodeid', valueAllowUnset: true, allow_single_deselect: true"></select>
+            </div>
+        </div>
+    <!--/ko-->
 </div>
