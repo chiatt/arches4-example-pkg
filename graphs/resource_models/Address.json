@@ -1,0 +1,235 @@
+{
+    "graph": [
+        {
+            "author": " ", 
+            "cards": [
+                {
+                    "active": true, 
+                    "cardid": "e3630659-471d-11e8-9b87-c4b301baab9f", 
+                    "description": "Represents a node and node type pairing", 
+                    "graph_id": "b323c861-471d-11e8-a07b-c4b301baab9f", 
+                    "helpenabled": false, 
+                    "helptext": null, 
+                    "helptitle": null, 
+                    "instructions": "", 
+                    "is_editable": true, 
+                    "name": "Node/Node Type", 
+                    "nodegroup_id": "e362fe8a-471d-11e8-96bc-c4b301baab9f", 
+                    "sortorder": null, 
+                    "visible": true
+                }, 
+                {
+                    "active": true, 
+                    "cardid": "2296a138-471e-11e8-a1d7-c4b301baab9f", 
+                    "description": "Represents a node and node type pairing", 
+                    "graph_id": "b323c861-471d-11e8-a07b-c4b301baab9f", 
+                    "helpenabled": false, 
+                    "helptext": null, 
+                    "helptitle": null, 
+                    "instructions": "", 
+                    "is_editable": true, 
+                    "name": "Node/Node Type", 
+                    "nodegroup_id": "22969ede-471e-11e8-a8f2-c4b301baab9f", 
+                    "sortorder": null, 
+                    "visible": true
+                }, 
+                {
+                    "active": true, 
+                    "cardid": "180da338-471e-11e8-80da-c4b301baab9f", 
+                    "description": "Represents a node and node type pairing", 
+                    "graph_id": "b323c861-471d-11e8-a07b-c4b301baab9f", 
+                    "helpenabled": false, 
+                    "helptext": null, 
+                    "helptitle": null, 
+                    "instructions": "", 
+                    "is_editable": true, 
+                    "name": "Node/Node Type", 
+                    "nodegroup_id": "180da0e1-471e-11e8-9195-c4b301baab9f", 
+                    "sortorder": null, 
+                    "visible": true
+                }
+            ], 
+            "cards_x_nodes_x_widgets": [], 
+            "deploymentdate": null, 
+            "deploymentfile": null, 
+            "description": "", 
+            "edges": [
+                {
+                    "description": null, 
+                    "domainnode_id": "b322a94f-471d-11e8-bfc3-c4b301baab9f", 
+                    "edgeid": "e3630c99-471d-11e8-97d0-c4b301baab9f", 
+                    "graph_id": "b323c861-471d-11e8-a07b-c4b301baab9f", 
+                    "name": null, 
+                    "ontologyproperty": null, 
+                    "rangenode_id": "e362fe8a-471d-11e8-96bc-c4b301baab9f"
+                }, 
+                {
+                    "description": null, 
+                    "domainnode_id": "b322a94f-471d-11e8-bfc3-c4b301baab9f", 
+                    "edgeid": "2296a64a-471e-11e8-841a-c4b301baab9f", 
+                    "graph_id": "b323c861-471d-11e8-a07b-c4b301baab9f", 
+                    "name": null, 
+                    "ontologyproperty": null, 
+                    "rangenode_id": "22969ede-471e-11e8-a8f2-c4b301baab9f"
+                }, 
+                {
+                    "description": null, 
+                    "domainnode_id": "b322a94f-471d-11e8-bfc3-c4b301baab9f", 
+                    "edgeid": "180da857-471e-11e8-a2e4-c4b301baab9f", 
+                    "graph_id": "b323c861-471d-11e8-a07b-c4b301baab9f", 
+                    "name": null, 
+                    "ontologyproperty": null, 
+                    "rangenode_id": "180da0e1-471e-11e8-9195-c4b301baab9f"
+                }
+            ], 
+            "forms": [], 
+            "forms_x_cards": [], 
+            "functions_x_graphs": [], 
+            "graphid": "b323c861-471d-11e8-a07b-c4b301baab9f", 
+            "iconclass": "fa fa-home", 
+            "is_editable": true, 
+            "isactive": true, 
+            "isresource": true, 
+            "name": "TestAddress", 
+            "nodegroups": [
+                {
+                    "cardinality": "n", 
+                    "legacygroupid": null, 
+                    "nodegroupid": "e362fe8a-471d-11e8-96bc-c4b301baab9f", 
+                    "parentnodegroup_id": null
+                }, 
+                {
+                    "cardinality": "n", 
+                    "legacygroupid": null, 
+                    "nodegroupid": "180da0e1-471e-11e8-9195-c4b301baab9f", 
+                    "parentnodegroup_id": null
+                }, 
+                {
+                    "cardinality": "n", 
+                    "legacygroupid": null, 
+                    "nodegroupid": "22969ede-471e-11e8-a8f2-c4b301baab9f", 
+                    "parentnodegroup_id": null
+                }
+            ], 
+            "nodes": [
+                {
+                    "config": null, 
+                    "datatype": "string", 
+                    "description": "", 
+                    "graph_id": "b323c861-471d-11e8-a07b-c4b301baab9f", 
+                    "is_collector": true, 
+                    "isrequired": false, 
+                    "issearchable": true, 
+                    "istopnode": false, 
+                    "name": "street", 
+                    "nodegroup_id": "e362fe8a-471d-11e8-96bc-c4b301baab9f", 
+                    "nodeid": "e362fe8a-471d-11e8-96bc-c4b301baab9f", 
+                    "ontologyclass": null, 
+                    "parentproperty": null
+                }, 
+                {
+                    "config": {
+                        "fillColor": "rgba(233,112,111,0.8)"
+                    }, 
+                    "datatype": "semantic", 
+                    "description": "", 
+                    "graph_id": "b323c861-471d-11e8-a07b-c4b301baab9f", 
+                    "is_collector": false, 
+                    "isrequired": false, 
+                    "issearchable": true, 
+                    "istopnode": true, 
+                    "name": "address", 
+                    "nodegroup_id": null, 
+                    "nodeid": "b322a94f-471d-11e8-bfc3-c4b301baab9f", 
+                    "ontologyclass": null, 
+                    "parentproperty": ""
+                }, 
+                {
+                    "config": {
+                        "addToMap": false, 
+                        "advancedStyle": "", 
+                        "advancedStyling": false, 
+                        "autoManageCache": false, 
+                        "cacheTiles": false, 
+                        "clusterDistance": 20, 
+                        "clusterMaxZoom": 5, 
+                        "clusterMinPoints": 3, 
+                        "fillColor": "rgba(130, 130, 130, 0.5)", 
+                        "haloRadius": 4, 
+                        "haloWeight": 4, 
+                        "layerActivated": true, 
+                        "layerIcon": "", 
+                        "layerName": "", 
+                        "lineColor": "rgba(130, 130, 130, 0.7)", 
+                        "lineHaloColor": "rgba(200, 200, 200, 0.5)", 
+                        "outlineColor": "rgba(200, 200, 200, 0.7)", 
+                        "outlineWeight": 2, 
+                        "pointColor": "rgba(130, 130, 130, 0.7)", 
+                        "pointHaloColor": "rgba(200, 200, 200, 0.5)", 
+                        "radius": 2, 
+                        "simplification": 0.3, 
+                        "weight": 2
+                    }, 
+                    "datatype": "geojson-feature-collection", 
+                    "description": "", 
+                    "graph_id": "b323c861-471d-11e8-a07b-c4b301baab9f", 
+                    "is_collector": true, 
+                    "isrequired": false, 
+                    "issearchable": true, 
+                    "istopnode": false, 
+                    "name": "location", 
+                    "nodegroup_id": "22969ede-471e-11e8-a8f2-c4b301baab9f", 
+                    "nodeid": "22969ede-471e-11e8-a8f2-c4b301baab9f", 
+                    "ontologyclass": null, 
+                    "parentproperty": null
+                }, 
+                {
+                    "config": null, 
+                    "datatype": "string", 
+                    "description": "", 
+                    "graph_id": "b323c861-471d-11e8-a07b-c4b301baab9f", 
+                    "is_collector": true, 
+                    "isrequired": false, 
+                    "issearchable": true, 
+                    "istopnode": false, 
+                    "name": "parcel", 
+                    "nodegroup_id": "180da0e1-471e-11e8-9195-c4b301baab9f", 
+                    "nodeid": "180da0e1-471e-11e8-9195-c4b301baab9f", 
+                    "ontologyclass": null, 
+                    "parentproperty": null
+                }
+            ], 
+            "ontology_id": null, 
+            "relatable_resource_model_ids": [
+                "b323c861-471d-11e8-a07b-c4b301baab9f", 
+                "b323c861-471d-11e8-a07b-c4b301baab9f"
+            ], 
+            "reports": [], 
+            "resource_2_resource_constraints": [], 
+            "root": {
+                "config": {
+                    "fillColor": "rgba(233,112,111,0.8)"
+                }, 
+                "datatype": "semantic", 
+                "description": "", 
+                "graph_id": "b323c861-471d-11e8-a07b-c4b301baab9f", 
+                "is_collector": false, 
+                "isrequired": false, 
+                "issearchable": true, 
+                "istopnode": true, 
+                "name": "address", 
+                "nodegroup_id": null, 
+                "nodeid": "b322a94f-471d-11e8-bfc3-c4b301baab9f", 
+                "ontologyclass": null
+            }, 
+            "subtitle": "", 
+            "version": ""
+        }
+    ], 
+    "metadata": {
+        "db": "PostgreSQL 9.6.1 on x86_64-apple-darwin16.1.0, compiled by Apple LLVM version 8.0.0 (clang-800.0.42.1), 64-bit", 
+        "git hash": "68462d8 2018-04-18 14:15:56 -0700", 
+        "os": "Darwin", 
+        "os version": "17.5.0"
+    }
+}
