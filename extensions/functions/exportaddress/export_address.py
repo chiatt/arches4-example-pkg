@@ -14,19 +14,19 @@ details = {
     'name': 'Export Address',
     'type': 'node',
     'description': 'Just a sample demonstrating node group selection',
-    'defaultconfig': {"external_address_url":"", "target_fields":[], "geometry_node":""},
+    'defaultconfig': {"external_address_url":"", "target_fields":[], "geometry_node":"", "external_reference_node":""},
     'classname': 'ExportAddress',
     'component': 'views/components/functions/export-address'
 }
 
 class ExportAddress(BaseFunction):
 
-    def __init__(self):
-         self.url = self.config['external_address_url']
-         self.geometry_node = self.config['geometry_node']
-         self.field_lookup = {field.node: field.name for field in self.config['target_fields']}
-
     def save(self, tile, request):
+        self.url = self.config['external_address_url']
+        self.geometry_node = self.config['geometry_node']
+        self.external_reference_node = self.config['external_reference_node']
+        print self.config['target_fields']
+        self.field_lookup = {field['node']: field['name'] for field in self.config['target_fields']}
         tile_edits = json.loads(request.POST.get('data'))['data']
         if request:
             address = {
@@ -65,10 +65,10 @@ class ExportAddress(BaseFunction):
                 "token": "tTzVkJ7RPpZmqmlxc7xVBaORWK8vIKQenSkbmK13OnDfIHNKaNCIaH3i6Nz1AUbdnqkEsz8HuA-QqYrndP4yyqgov0NUgabK3lOO19erL-YYPtbIhEzahbSeQ0wPkJx1TH7RVL-gJ9m3iBsV9Affr0NczrLunSdj6rsa1Kg4QI8fTWpdgj0VCy7FaANWggjI6b7kDATtb43W9-hHxmndcjEU9S7lBzCfTty1b4GnAF3dmYhoh4ZBLC-XpsLetKEJ"
             }
 
-            result_node = models.Node.objects.get(pk='1a08f3cc-4746-11e8-b7cc-0242ac120006')
+            result_node = models.Node.objects.get(pk=self.external_reference_node)
+
             external_reference = Tile.objects.filter(nodegroup=result_node.nodegroup).filter(resourceinstance=tile.resourceinstance_id)
             tiles = Tile.objects.filter(resourceinstance=tile.resourceinstance_id)
-
             has_geom = False
 
             for tile in tiles:
@@ -94,7 +94,7 @@ class ExportAddress(BaseFunction):
 
             if has_geom:
                 if len(external_reference) != 0:
-                    address["attributes"]["FID"] = int(external_reference[0].data["1a08f3cc-4746-11e8-b7cc-0242ac120006"])
+                    address["attributes"]["FID"] = int(external_reference[0].data[self.external_reference_node])
                     payload["updates"].append(address)
                 else:
                     payload["adds"].append(address)
@@ -110,7 +110,7 @@ class ExportAddress(BaseFunction):
                     if response['addResults'][0]['success'] == True:
                         result_tile = models.TileModel()
                         result_tile.resourceinstance = models.ResourceInstance.objects.get(pk=tile.resourceinstance_id)
-                        result_tile.data = {"1a08f3cc-4746-11e8-b7cc-0242ac120006": str(response['addResults'][0]['objectId'])}
+                        result_tile.data = {self.external_reference_node: str(response['addResults'][0]['objectId'])}
                         result_tile.nodegroup = result_node.nodegroup
                         result_tile.save()
                 f.close()

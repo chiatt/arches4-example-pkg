@@ -21,6 +21,35 @@
             </div>
         </div>
     </div>
+
+    <div class="node-dropdown">
+        <div>
+        <label class="col-xs-12 control-label widget-input-label">
+            <div style="display: flex">
+                <div>{% trans 'External Reference' %}</div>
+            </div>
+        </label>
+    </div>
+        <div>
+            <select data-placeholder="{% trans 'select matching node' %}" data-bind="chosen: {width: '100%', disable_search_threshold: 15}, value: externalReference, options: nodes(), optionsText: 'name', optionsValue: 'nodeid', valueAllowUnset: true, allow_single_deselect: true"></select>
+        </div>
+    </div>
+
+
+    <div class="node-dropdown">
+        <div>
+        <label class="col-xs-12 control-label widget-input-label">
+            <div style="display: flex">
+                <div>{% trans 'Geometry' %}</div>
+            </div>
+        </label>
+    </div>
+        <div>
+            <select data-placeholder="{% trans 'select matching node' %}" data-bind="chosen: {width: '100%', disable_search_threshold: 15}, value: geometry, options: nodes(), optionsText: 'name', optionsValue: 'nodeid', valueAllowUnset: true, allow_single_deselect: true"></select>
+        </div>
+    </div>
+
+
     <!--ko foreach: targetFields -->
         <div class="node-dropdown">
             <div>
